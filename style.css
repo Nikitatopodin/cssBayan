@@ -135,7 +135,7 @@ body {
 header,
 main,
 footer {
-	max-width: 80%;
+	max-width: 90%;
 	margin: 0 auto;
 }
 
@@ -224,6 +224,22 @@ input:checked~label .meme-name-icon {
 }
 
 @media (hover:hover) {
+	.meme-name-icon {
+		display: none;
+		flex: 0 0 2rem;
+		width: 2rem;
+		height: 2rem;
+		margin-left: 1rem;
+		background-size: 2rem 2rem;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url("img/svg/plus.svg");
+		transition: all 0.1s;
+	}
+
+	.accordion-list-item:hover .meme-content {
+		transform: scale(1);
+	}
 
 	.accordion-container:hover {
 		color: black;
@@ -233,14 +249,70 @@ input:checked~label .meme-name-icon {
 		display: block;
 	}
 
-	.accordion-list-item:hover .meme-content {
-		height: 40vh;
-		transform: scale(1);
+	@media (min-width: 1200px) {
+		.accordion-list-item:hover .meme-content {
+			height: 35vw;
+		}
 	}
+
+	@media (min-width: 1300px) {
+		.accordion-list-item:hover .meme-content {
+			height: 30vw;
+		}
+	}
+
+	@media (min-width: 1400px) {
+		.accordion-list-item:hover .meme-content {
+			height: 25vw;
+		}
+	}
+
 
 	.accordion-list-item:hover .meme-name-icon {
 		transform: rotate(45deg);
 	}
+
+
 }
 
-@media screen {}
+@media (min-width: 569px) {
+	html {
+		font-size: 0.85em;
+	}
+
+	header,
+	main,
+	footer {
+		max-width: 75%;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		font-size: 1em;
+	}
+
+	header,
+	main,
+	footer {
+		max-width: 60%;
+		margin: 0 auto;
+	}
+
+	input:checked~label .meme-content {
+		height: 35vw;
+	}
+}
+
+@media (min-width: 1300px) {
+	input:checked~label .meme-content {
+		height: 30vw;
+	}
+}
+
+@media (min-width: 1400px) {
+	input:checked~label .meme-content {
+		height: 25vw;
+	}
+}
